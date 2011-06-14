@@ -1,0 +1,38 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{cmap}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+
+\usepackage{setspace} % межстрочные интервалы
+\onehalfspacing
+
+\usepackage{misccorr} % в заголовках появляется точка, но при ссылке на них ее нет 
+\usepackage{indentfirst} % после заголовков ставится абзацный отступ
+
+\usepackage{geometry} % Меняем поля страницы
+\geometry{left=3cm}
+\geometry{right=1.5cm}
+\geometry{top=2cm}
+\geometry{bottom=2cm}
+
+\bibliographystyle{plain}
+
+\newtheorem{theorem}{Теорема}
+\newtheorem{lemma}{Лемма}
+\newtheorem{corollary}{Следствие}
+\newtheorem{proposition}{Утверждение}
+\newtheorem{definition}{Определение}
+\newtheorem{remark}{Замечание}
+
+
+\begin{document}
+
+\include{title}
+
+\tableofcontents
+
+\include{content}
+
+\bibliography{biblio}
+
+\end{document}
