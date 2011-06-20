@@ -1,0 +1,52 @@
+Вычислим $v_i^{_{13}D}$. Запишем вспомогательные равенства, которые понадобятся далее:
+\\
+$ d y_1 y_2 = \frac{ (c_{22}c_{13} - c_{12}c_{23}) (c_{11}c_{23} - c_{21}c_{13}) }{d} = \frac{ c_{22}c_{13}c_{11}c_{23} + c_{12}c_{23}c_{21}c_{13} }{d} = c_{13}c_{23}, $
+\\
+$ d c_{31} y_1 c_{32} y_2 = - c_{31}c_{32} d y_1 y_2 = - c_{31}c_{32}c_{13}c_{23} = c_{31}c_{13}c_{32}c_{23}, $
+\\
+$ c_{13} (c_{31} y_1 + c_{32} y_2) = \frac{c_{13}c_{31} (c_{22}c_{13} - c_{12}c_{23}) + c_{13}c_{32} (c_{11}c_{23} - c_{21}c_{13}) }{d} = \frac{-c_{13}c_{23} (c_{32}c_{11} - c_{31}c_{12})}{d} = c_{11} c_{32} y_2 y_1 + c_{12}c_{31} y_1 y_2, $
+\\
+$ c_{11} y_1 + c_{12} y_2 = \frac{c_{11} (c_{22}c_{13} - c_{12}c_{23}) + c_{12} (c_{11}c_{23} - c_{21}c_{13}) }{d} = 
+\frac{ c_{11}c_{22}c_{13} - c_{12}c_{21}c_{13} }{d} = c_{13}. $
+
+Учитывая их, перепишем вектор $v_i$ в виде
+\\
+$ v_i = d^{\lambda_2 - 1} c_{11}^{\lambda_1 - \lambda_2 - i} c_{12}^i (c_{33}^{\lambda_3} d - \lambda_3 c_{33}^{\lambda_3 - 1} (c_{31} d y_1 + c_{32} d y_2) + \lambda_3 (\lambda_3 - 1) c_{33}^{\lambda_3 - 2} c_{31}c_{13}c_{32}c_{23}). $
+\\
+\\
+%
+% Vi 13 D
+%
+$ v_i^{_{13}D} = d^{\lambda_2 - 1} c_{11}^{\lambda_1 - \lambda_2 - i} c_{12}^i (c_{33}^{\lambda_3} y_1 d - \lambda_3 c_{33}^{\lambda_3 - 1} (- c_{33} d y_1 - 2 c_{32} c_{13} c_{23}) - \lambda_3 (\lambda_3 - 1) c_{33}^{\lambda_3 - 2} c_{33}c_{13}c_{32}c_{23}) + 
+\\
+(\lambda_1 - \lambda_2 - i) d^{\lambda_2 - 1} c_{11}^{\lambda_1 - \lambda_2 - i - 1} c_{13} c_{12}^i (c_{33}^{\lambda_3} d - \lambda_3 c_{33}^{\lambda_3 - 1} (c_{31} d y_1 + c_{32} d y_2) + \lambda_3 (\lambda_3 - 1) c_{33}^{\lambda_3 - 2} c_{31}c_{13}c_{32}c_{23}) +
+\\
+(\lambda_2 - 1) d^{\lambda_2 - 1} y_1 c_{11}^{\lambda_1 - \lambda_2 - i} c_{12}^i (c_{33}^{\lambda_3} d - \lambda_3 c_{33}^{\lambda_3 - 1} (c_{31} d y_1 + c_{32} d y_2) + \lambda_3 (\lambda_3 - 1) c_{33}^{\lambda_3 - 2} c_{31}c_{13}c_{32}c_{23}) = 
+\\
+t_1 + t_2 + t_3 = (*) $
+\\
+\\
+$ t_1 = d^{\lambda_2 - 1} c_{11}^{\lambda_1 - \lambda_2 - i} c_{12}^i (c_{33}^{\lambda_3} y_1 d + \lambda_3 c_{33}^{\lambda_3} d y_1 + 2 \lambda_3 c_{33}^{\lambda_3 - 1} c_{32}c_{13}c_{23} + \lambda_3 (\lambda_3 - 1) c_{33}^{\lambda_3 - 1} c_{32}c_{13}c_{23}) =
+d^{\lambda_2 - 1} c_{11}^{\lambda_1 - \lambda_2 - i} c_{12}^i ( (\lambda_3 + 1) c_{33}^{\lambda_3} y_1 d - (\lambda_3 + 1) \lambda_3 c_{33}^{\lambda_3 - 1} c_{32}c_{23}c_{13}) = (\lambda_3 + 1) w_i $
+\\
+\\
+$ t_3 = (\lambda_2 - 1) d^{\lambda_2 - 1} y_1 c_{11}^{\lambda_1 - \lambda_2 - i} c_{12}^i (c_{33}^{\lambda_3} d - \lambda_3 c_{33}^{\lambda_3 - 1} c_{32} d y_2) = (\lambda_2 - 1) w_i $
+\\
+\\
+$ t_2 = (\lambda_1 - \lambda_2 - i) d^{\lambda_2 - 1} c_{11}^{\lambda_1 - \lambda_2 - i - 1} c_{12}^i (c_{33}^{\lambda_3} c_{13} - \lambda_3 c_{33}^{\lambda_3 - 1} c_{13} (c_{31} y_1 + c_{32} y_2)) = 
+\\
+(\lambda_1 - \lambda_2 - i) d^{\lambda_2 - 1} c_{11}^{\lambda_1 - \lambda_2 - i - 1} c_{12}^i c_{33}^{\lambda_3} c_{13} + (\lambda_1 - \lambda_2 - i) d^{\lambda_2 - 1} c_{11}^{\lambda_1 - \lambda_2 - i} c_{12}^i (- \lambda_3 c_{33}^{\lambda_3 - 1} c_{32} y_2 y_1) + 
+\\
+(\lambda_1 - \lambda_2 - i) d^{\lambda_2 - 1} c_{11}^{\lambda_1 - \lambda_2 - i - 1} c_{12}^{i + 1} (- \lambda_3 c_{33}^{\lambda_3 - 1} c_{32} y_1 y_2) = 
+(\lambda_1 - \lambda_2 - i) d^{\lambda_2 - 1} c_{11}^{\lambda_1 - \lambda_2 - i - 1} c_{12}^i c_{33}^{\lambda_3} c_{13} + 
+\\
+(\lambda_1 - \lambda_2 - i) w_i - (\lambda_1 - \lambda_2 - i) d^{\lambda_2 - 1} c_{11}^{\lambda_1 - \lambda_2 - i} c_{12}^i c_{33}^{\lambda_3} y_1 + (\lambda_1 - \lambda_2 - i) u_{i + 1} - 
+\\
+(\lambda_1 - \lambda_2 - i) d^{\lambda_2 - 1} c_{11}^{\lambda_1 - \lambda_2 - i - 1} c_{12}^{i + 1} c_{33}^{\lambda_3} y_2 = 
+(\lambda_1 - \lambda_2 - i) w_i + (\lambda_1 - \lambda_2 - i) u_{i + 1} + 
+\\
+(\lambda_1 - \lambda_2 - i) d^{\lambda_2 - 1} c_{11}^{\lambda_1 - \lambda_2 - i - 1} c_{12}^i c_{33}^{\lambda_3} (c_{13} - c_{11} y_1 - c_{12} y_2) = (\lambda_1 - \lambda_2 - i) w_i + (\lambda_1 - \lambda_2 - i) u_{i + 1} $
+\\
+\\
+$ (*) = (\lambda_3 + 1) w_i + (\lambda_2 - 1) w_i + (\lambda_1 - \lambda_2 - i) w_i + (\lambda_1 - \lambda_2 - i) u_{i + 1} = 
+(\lambda_1 + \lambda_3 - i) w_i + (\lambda_1 - \lambda_2 - i) u_{i + 1}. $

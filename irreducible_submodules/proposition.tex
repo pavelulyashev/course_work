@@ -1,0 +1,79 @@
+\begin{proposition} Пусть $ k = \sum\limits_{i = 0}^{s} k_i p^i $.
+\begin{enumerate}
+\item [\textup{(a)}] Если $\lambda$ - регулярный вес, то 
+
+$$ \chi(\lambda) = (x_1 x_2)^{\lambda_2 - 1} x_3^{\lambda_3} p_t (x_1, x_2) [\,x_1 x_2 + x_1 x_3 + x_2 x_3 + x_3^2\,] \prod\limits_{i = 0}^{s}p_{k_i} ~(x_1^{p^i}, x_2^{p^i})$$
+
+и $ \mbox{\textup{dim}}\,(L_{\lambda}) = 4 ...$.
+
+\item [\textup{(b)}] Если $\lambda$ - критический вес, то
+
+$$ \chi(\lambda) = (x_1 x_2)^{\lambda_2 - 1} x_3^{\lambda_3} [\,p_t (x_1, x_2) x_1 x_2 + p_{t + 1} (x_1, x_2) x_3\,] \prod\limits_{i = 0}^{s}p_{k_i} ~(x_1^{p^i}, x_2^{p^i}) $$
+
+и $\mbox{\textup{dim}}\,(L_{\lambda}) = 4 ...$.
+\item [\textup{(c)}] Если $\lambda$ - критический вес, то
+
+$$ \chi(\lambda) = (x_1 x_2)^{\lambda_2} x_3^{\lambda_3} [\,p_t (x_1, x_2) + p_{t - 1} (x_1, x_2) x_3 \,] \prod\limits_{i = 0}^{s}p_{k_i} ~(x_1^{p^i}, x_2^{p^i}) $$
+
+и $\mbox{\textup{dim}}\,(L_{\lambda}) = 4 ...$.
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+
+TODO: привести теорему Стейнберга и пояснить, что произойдёт в нашем случае.
+
+Сначала предположим, что $\lambda_2 > 0$. Тогда векторы $v_i, w_i, u_i \mbox{ и } r_i$ полиномиальны для $i = 0, \ldots, \lambda_1 - \lambda_2$ и образуют базис модуля $\nabla (\lambda)$.
+
+TODO: объяснить, зачем нужны производные.
+
+\input{derivatives/example}
+\\
+
+Аналогично вычисляются остальные производные.
+
+\input{derivatives/list_basis}
+
+Отсюда следует, что $ v_0, \ldots, v_t \in L_{\lambda} $, а поэтому $ v_i^{_{13}D} $ и $ v_{i + 1}^{_{23}D} $ тоже принадлежат $ L_{\lambda} $ при $ 0 \leq i < t $. Для $ 0 \leq i < t $ представим $ v_i^{_{13}D} $ и $ v_{i + 1}^{_{23}D} $ как линейную комбинацию векторов $ w_i, u_{i + 1} $ подпространства с весом $ (\lambda_1 - i - 1, \lambda_2 + i \,|\, \lambda_3) $. Зависимость выражается матрицей 
+
+$$
+\begin{pmatrix}
+\lambda_1 + \lambda_3 - i & \lambda_1 - \lambda_2 - i \\
+i + 1 & \lambda_2 + \lambda_3 + i + 1 \\
+\end{pmatrix}
+.$$
+
+Её определитель $ \mbox{det}\, \lambda = (\lambda_1 + \lambda_3 + 1) (\lambda_2 + \lambda_3) $.
+\\
+
+(a) $\lambda$ регулярный.
+
+Так как $ \mbox{det}\, \lambda \not\equiv 0 ~(\mbox{mod}\,p) $, то $ w_i, u_{i + 1} \in L_{\lambda} $, а следовательно и $ r_i \in L_{\lambda} $ для $ 0 \leq i < t $.
+Получаем, что $ v_0, \ldots, v_t, w_0, \ldots, w_t, u_0, \ldots, u_t, r_0, \ldots, r_t $ составляют базис $ L_{\lambda} $. Следовательно,
+$$ \chi(\lambda) = (x_1 x_2)^{\lambda_2 - 1} x_3^{\lambda_3} p_t (x_1, x_2) [\,x_1 x_2 + x_1 x_3 + x_2 x_3 + x_3^2\,] $$
+и $ \mbox{dim}\,(L_{\lambda}) = 4 (t + 1). $
+
+(b) $\lambda$ критический.
+
+Так как $ \lambda_2 + \lambda_3 \not\equiv 0 ~(\mbox{mod}\,p) $ и $ v_0^{_{23}D} = (\lambda_2 + \lambda_3) u_0 $, то $ u_0 \in L_{\lambda}. $ Кроме того, $ \lambda_1 + \lambda_3 - t \equiv \lambda_2 + \lambda_3 \not\equiv 0 ~(\mbox{mod}\,p) $ и $ v_t^{_{13}D} = (\lambda_1 + \lambda_3 - t) w_t $, поэтому $ w_t \in L_{\lambda} $.
+
+$ v_i^{_{13}D} $ и $ v_{i + 1}^{_{23}D} $ линейно зависимы, поэтому рассмотрим только $ q_i = v_i^{_{13}D} = -(i + 1)w_i + (t - i)u_{i + 1} \in L_{\lambda} $ при $ 0 \leq i < t-1 $.
+
+Выясним, какие векторы порождаются векторами $u_0, w_t $ и $ q_i $: \\
+$ w_t^{_{12}D} = (\lambda_1 - \lambda_2 - t)w_i = 0, w_t^{_{13}D} = 0, w_t^{_{23}D} = (\lambda_2 + \lambda_3 + t + 1)r_i = (\lambda_1 + \lambda_3 + 1)r_i = 0, \\
+u_0^{_{12}D} = -w_0 + (\lambda_1 - \lambda_2)u_1 = q_0, u_0^{_{13}D} = (-\lambda_1 - \lambda_3 - 1)r_i = 0, u_0^{_{23}D} = 0, \\
+q_i^{_{12}D} = -(i + 1)(t - i)w_{i + 1} + (t - i)(-w_{i + 1} + (t - (i + 1))u_{i + 2} = (t - i)q_{i + 1}, \\
+q_i^{_{13}D} = -(i + 1)(t - i)r_{i + 1} + (t - i)(i + 1 -\lambda_1 - \lambda_3 - 1)r_{i + 1} = (t - i)(-\lambda_1 - \lambda_3 - 1)r_{i + 1} = 0, \\
+q_i^{_{23}D} = -(i + 1)(\lambda_2 + \lambda_3 + i + 1) - (t - i)(i + 1)r_i = -(i + 1)(t + \lambda_2 + \lambda_3 + 1)r_i = 0. $ Таким образом, новые векторы не появляются, следовательно, векторы $ v_0, \ldots, v_t, u_0, w_t, q_0, \ldots, q_{t - 1} $ составляют базис $ L_{\lambda} $. Учитывая, что вес $q_i$ cсовпадает с весом $w_i$, получаем 
+
+$$ \chi(\lambda) = (x_1 x_2)^{\lambda_2 - 1} x_3^{\lambda_3} [\,p_t (x_1, x_2) x_1 x_2 + p_{t + 1} (x_1, x_2) x_3\,] $$
+и $ \mbox{dim}\,(L_{\lambda}) = 2t + 3 $.
+
+(c) $\lambda$ сильно критический.
+
+Аналогично предыдущему пункту рассматриваем только $ q_i = v_i^{_{13}D} = (\lambda_1 + \lambda_3 - i)w_i + (t - i)u_{i + 1} = (t - i)(w_i + u_{i + 1}) \in L_{\lambda} $ при $ 0 \leq i < t $. 
+
+$ q_i^{_{12}D} = (t - i)q_{i + 1}, q_i^{_{13}D} = 0, q_i^{_{23}D} = 0 $ при $ 0 \leq i < t $. Кроме того, $ v_0^{_{23}D} = (\lambda_2 + \lambda_3)u_0 $ и $ v_t^{_{13}D} = (\lambda_1 + \lambda_3 - t)w_t = 0 $, поэтому $ u_0, w_t \notin L_{\lambda} $. Следовательно, 
+$$ \chi(\lambda) = (x_1 x_2)^{\lambda_2} x_3^{\lambda_3} [\,p_t (x_1, x_2) + p_{t - 1} (x_1, x_2) x_3 \,] $$
+и $ \mbox{dim}\,(L_{\lambda}) = 2t + 1 $.
+
+\end{proof}
