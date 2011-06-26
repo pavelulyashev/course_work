@@ -1,0 +1,37 @@
+\begin{definition}
+Вес $ \lambda $ называется $p$-ограниченным, если он является доминантным и $ \lambda_i - \lambda_{i + 1} < p $ 
+для $ i = 1, \ldots, m - 1 $ и $ i = m + 1, \ldots, m + n - 1 $.
+\end{definition}
+%
+В нашем случае для веса $ \mu = (\mu_1, \mu_2 \,|\, \mu_3) $ и $p$-ограниченность означает, что $ \mu_1 - \mu_2 = t < p $.
+Запишем разность $ \lambda_1 - \lambda_2 = t + pk $, где $ 0 \leq t < p $, и выделим из веса $ \lambda $ $p$-ограниченную часть.
+\begin{enumerate}
+\item [a)] Если $ \lambda_2 > 0 $, то $ \lambda_3 = p \lambda_3 ' + \lambda_3 '' $, где $ \lambda_3 '' < p $, и
+$$
+(\lambda_1, \lambda_2 \,|\, \lambda_3) = (t + \lambda_2, \lambda_2 \,|\, \lambda_3 '') + p (k, 0 \,|\, \lambda_3 ').
+$$
+\item [b)] Если $ \lambda_2 = 0 $, то $ \lambda_3 = p \lambda_3 ' $ и
+$$
+(\lambda_1, \lambda_2 \,|\, \lambda_3) = (t, 0 \,|\, 0) + p (k, 0 \,|\, \lambda_3 ').
+$$
+\end{enumerate}
+
+Заметим, что для если вес $\lambda$ является регулярным (критическим, сильно критическим), 
+то $p$-ограниченная часть также будет регулярной (критической, сильно критической).
+
+Обозначим через $M^{[p]}$ скручивание Фробениуса модуля $M$. Подробное описание можно найти в \cite{donkin}, \cite{steinberg_theorem}.
+Для нас важным является то, что скуручивание Фробениуса действует на элементы модуля $M$ возведением в $p$-ю степень.
+Таким образом, если $ \chi(M) = \sum \mbox{dim}\,V_{\lambda} \, t^{\lambda} $, то $ \chi (M^{[p]}) = \sum \mbox{dim}\,V_{\lambda} \, t^{p\lambda} $.
+
+\begin{theorem} (Стейнберг).\\
+Для $p$-ограниченного веса $\lambda$ и доминантного веса $\mu$
+$$ L(\lambda + p\mu) \cong L(\lambda) \otimes L_{ev}(\mu)^{[p]}, $$
+где $ L_{ev}(\mu) $ -- неприводимый $ GL(m) \times GL(n) $-супермодуль старшего веса $\mu$. 
+\end{theorem}
+
+$ L_{ev}(\mu) = L_{ev}(\mu_+) \otimes L_{ev}(\mu_-) $, т.е. в нашем случае $ L_{ev}(\mu) = L_{ev}(k, 0) \otimes L_{ev}(\lambda_3 ') $
+
+\begin{corollary}
+В условиях теоремы Стейнберга 
+$$ \chi(\lambda + p\mu) = \chi(\lambda) \, \chi(L_{ev}(\mu_+)^{[p]}) \, \chi(L_{ev}(\mu_-)^{[p]}). $$
+\end{corollary}

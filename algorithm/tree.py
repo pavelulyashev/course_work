@@ -99,7 +99,7 @@ if __name__ == '__main__':
     r = Weight(3, 3, 0)
     #print(w)
     #print(w == Weight(3, 2, 3))
-    tree = WeightTree(37)
+    tree = WeightTree(1999)
     f = open('test_tree.txt', 'w')
     f.write(tree.__str__())
     f.close()

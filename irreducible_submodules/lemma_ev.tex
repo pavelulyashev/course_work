@@ -1,0 +1,27 @@
+Cначала вычислим общую часть формального характера для случаев $ \lambda_2 > 0 $ и $ \lambda_2 = 0 $, т.е. $ \chi(L_{ev}(k, 0 \,|\, \lambda_3)^{[p]}) $.
+%
+\begin{lemma}
+Если $ k < p $, то $ L_{ev}(k, 0) = p_k (x_1, x_2) $. 
+\end{lemma}
+\begin{proof}
+Для вычисления формального характера $ L_{ev}(k, 0) $ нужно найти его базис.\\
+Обозначим $ v_i = c_{11}^{k - i} c_{12}^i $.
+Очевидно, $ L_{ev}(k, 0) $ порождается старшим вектором $ v_0 = c_{11}^k $ веса $(k, 0)$
+Поскольку $ v_i^{_{12}D} = (k - i) v_{i + 1} $, а $ v_i^{_{11}D} = i v_{i - 1} $, то базис $ L_{ev}(k, 0) $ составляют векторы $ v_0, \ldots, v_k $.
+Следовательно, $ \chi (L_{ev}(k, 0)) = \sum\limits_{i = 0}^k x_1^{k - i} x_2^i = p_k (x_1, x_2) $.
+\end{proof}
+
+\begin{lemma}
+$ \chi(L_{ev}(k, 0 \,|\, \lambda_3)^{[p]}) = x^{p\lambda_3} \prod\limits_{i = 0}^s p_{k_i} ~(x_1^{p^{i + 1}}, x_2^{p^{i + 1}}), $
+где $ k = \sum\limits_{i = 0}^{s} k_i p^i $.
+\end{lemma}
+\begin{proof}
+$ L_{ev}(\lambda_3) $ -- одномерный модуль, порожденный элементом $c_{33}$, поэтому $ \chi(L_{ev}(\lambda_3)) = x^{\lambda_3} $. 
+Следовательно $ \chi(L_{ev}(\lambda_3)^{[p]}) = x^{p\lambda_3} $.
+
+Пусть $ k = \sum\limits_{i = 0}^{s} k_i p^i $. Тогда $ L_{ev}(k, 0) \cong \bigotimes\limits_{i = 0}^s L_{ev}(k_i, 0)^{p_i} $, 
+следовательно, $ \chi (L_{ev}(k, 0)) = \prod\limits_{i = 0}^s \chi (L_{ev}(k_i, 0)^{p_i} $. Тогда по предыдущей лемме 
+$ \chi (L_{ev}(k, 0)) = \prod\limits_{i = 0}^s p_{k_i} ~(x_1^{p^i}, x_2^{p^i}) $, 
+$$ \chi (L_{ev}(k, 0)^{[p]}) = \prod\limits_{i = 0}^s p_{k_i} ~(x_1^{p^{i + 1}}, x_2^{p^{i + 1}}). $$
+Осталось только перемножить $ \chi (L_{ev}(k, 0)^{[p]}) $ и $ \chi (L_{ev}(\lambda_3)^{[p]}) $.
+\end{proof}
