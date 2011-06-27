@@ -1,0 +1,65 @@
+Напомним, что вес $ \lambda = (\lambda_1, \lambda_2 \,|\, \lambda_3) $ является старшим, 
+если $ \lambda_1 \geqslant \lambda_2 $ и $ p \,|\, \lambda_3 $, если $ \lambda_2 = 0 $.
+
+\begin{lemma}
+При $ r < p $ любой старший вес $ \lambda = (\lambda_1, \lambda_2 \,|\, \lambda_3) $ степени $r$ 
+является регулярным за исключением $ (r, 0 \,|\, 0) $.
+\end{lemma}
+\begin{proof}
+Если $\lambda$ -- сильно критический, то $ \lambda_2 + \lambda_3 = 0 $, т.к. $ \lambda_2 + \lambda_3 < p $. 
+Тогда $ \lambda_2 = \lambda_3 = 0 $, т.е. $ \lambda = (r, 0 \,|\, 0) $.
+
+Если $\lambda$ -- критический, то $ \lambda_1 + \lambda_3 + 1 = p $, т.е. $ \lambda_1 + \lambda_3 = p - 1 $,
+но тогда $ \lambda_2 = 0 $, $ \lambda_3 = 0 $ и вес не является критическим.
+\end{proof}
+
+Для определения ненулевых размерностей $ d_{\mu, \lambda} $ составим иерархию всех весов из $ \Lambda(r)^+ $.
+
+\begin{definition}
+Назовем вес $ \mu $ последователем веса $ \lambda $, если $ d_{\lambda, \mu} > 0 $ и $ \nexists \eta \in \Lambda(r)^+ : \lambda > \eta > \mu $.
+\end{definition}
+Для веса $ (r, 0 \,|\, 0) $ последователем является только $ (r - 1, 1 \,|\, 0) $ 
+
+\begin{lemma}
+Пусть $ \lambda \in \Lambda(r)^+ $ -- регулярный вес. Тогда его последователями являются несравнимые веса
+$ (\lambda_1 - 1, \lambda_2 + 1 \,|\, \lambda_3) $ и $ (\lambda_1, \lambda_2 - 1 \,|\, \lambda_3 + 1) $.
+\end{lemma}
+\begin{proof}
+$ L_{\lambda} $ имеет базис $ v_i, w_i, u_i, r_i $ с весами 
+$ (\lambda_1 - i, \lambda_2 + i \,|\, \lambda_3), (\lambda_1 - i - 1, \lambda_2 + i \,|\, \lambda_3 + 1), 
+(\lambda_1 - i, \lambda_2 + i - 1 \,|\, \lambda_3 + 1), (\lambda_1 - i - 1, \lambda_2 + i - 1 \,|\, \lambda_3 + 2) $.
+Подразумевая сравнение весов, имеем $ v_1 > v_i, u_0 > u_i, w_0 > w_i, r_0 > r_i $, поэтому последователями $ \lambda $ 
+могут быть только веса векторов $ v_1, w_0, u_0, r_0 $. 
+Поскольку $ v_1 > w_0, v_1 > r_0, u_0 > w_0, u_0 > r_0 $, а $ v_1 $ и $ u_0 $ не сравнимы, то 
+последователями $ \lambda $ являются веса векторов $ v_1 $ и $ u_0 $ -- 
+$ (\lambda_1 - 1, \lambda_2 + 1 \,|\, \lambda_3) $ и $ (\lambda_1, \lambda_2 - 1 \,|\, \lambda_3 + 1) $.
+\end{proof}
+%
+\begin{remark}
+Если $ \lambda = (\lambda_1, 1 \,|\, \lambda_3) $, то последователь будет только один -- \\
+$ (\lambda_1 - 1, \lambda_2 + 1 \,|\, \lambda_3) $.
+Если $ \lambda_1 = \lambda_2 $, то последователем будет только $ (\lambda_1, \lambda_2 - 1 \,|\, \lambda_3 + 1) $.
+Таким образом, иерархия заканчивается, когда оба условия выполнены, т.е. последним весом будет $ (1, 1 \,|\, r - 2) $.
+\end{remark}
+%
+\begin{lemma}
+Пусть $ \lambda = (\lambda_1, \lambda_2 \,|\, \lambda_3), \mu = (\mu_1, \mu_2 \,|\, \mu_3) \in \Lambda(r)^+ $.
+
+a) $ d_{\lambda, \mu} = 1 $, если выполнено одно из условий: \\
+1) $ \mu_3 = \lambda_3 $; \\
+2) $ \mu_3 = \lambda_3 + 2 $; \\
+3) $ \mu_3 = \lambda_3 + 1, \mu_1 = \lambda_1 $; \\
+4) $ \mu_3 = \lambda_3 + 1, \mu_2 = \lambda_1 $. \\
+
+b) $ d_{\lambda, \mu} = 1 $, если $ \mu_3 = \lambda_3 + 1, \mu_1 \neq \lambda_1, \mu_2 \neq \lambda_1 $.
+
+c) Иначе $ d_{\lambda, \mu} = 0 $.
+\end{lemma}
+\begin{proof}
+В $ L_{\lambda} $ повторяются только веса векторов $ u_i $ и $ w_{i + 1} $.
+Для векторов $ v_i $ $ \mu_3 = \lambda_3 $, для векторов $ r_i $ $ \mu_3 = \lambda_3 + 2 $. 
+Также не повторяются веса векторов $ w_0, u_t $ -- $ (\lambda_1, \lambda_2 - 1 \,|\, \lambda_3 + 1), (\lambda_2 - 1, \lambda_1 \,|\, \lambda_3 + 1) $,
+т.е. $ \mu_3 = \lambda_3 + 1 $ и $ \mu_1 = \lambda_1 $ или $ \mu_2 = \lambda_1 $.
+
+Все остальные веса с $ \mu_3 = \lambda_3 + 1 $ имеют кратность 2.
+\end{proof}

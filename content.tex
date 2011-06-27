@@ -1,23 +1,35 @@
-%\section{Постановка задачи}
-%	\input{data}
-%	\input{derivatives}
-
 \section{Предварительные сведения}
-	%\input{preliminaries/superspaces}
-	%\input{preliminaries/weight}
-	%\input{preliminaries/borel_subalgebras}
-	%\input{preliminaries/glmn}
+	\subsection{Супераналоги алгебраических систем}	
+		\input{preliminaries/superspaces}
+	\subsection{Общая линейная супергруппа}
+		\input{preliminaries/glmn}
+	\subsection{Мультииндексы и веса}
+		\input{preliminaries/weight}
+	\subsection{Подалгебры Бореля супералгебры Шура}
+		\input{preliminaries/borel_subalgebras}
 
+%
+\newpage
 \section{Неприводимые подмодули в $S(2 \,|\, 1)$}
 	\subsection{Основные понятия и обозначения}
-%		\input{irreducible_submodules/denotes}
+		\input{irreducible_submodules/denotes}
 	\subsection{Теорема Стейнберга}	
-%		\input{irreducible_submodules/steinberg}
+		\input{irreducible_submodules/steinberg}
 	\subsection{Вычисление формальных характеров}
-%		\input{irreducible_submodules/lemma_ev}
-%		\input{irreducible_submodules/proposition}
-%\newpage
+		\input{irreducible_submodules/lemma_ev}
+		\input{irreducible_submodules/proposition}
+%
+\newpage
 \section{Композиционные ряды костандартных модулей в $S(2 \,|\, 1)$}
-	\input{composition_factors}
-%\newpage
-%\section{Алгоритм вычисления формальных характеров неприводимых}
+	\input{composition_factors/composition_factors}
+%
+\newpage
+\section{Алгоритм вычисления формальных характеров $I(\lambda)$}
+	\subsection{Постановка задачи}
+		\input{algorithm/injective}
+	\subsection{Вычисление формального характера $ A(r)\xi_{\lambda} $}
+		\input{algorithm/ar_xi}
+	\subsection{Вычисление размерностей $ d_{\mu,\lambda} $}
+		\input{algorithm/d_mu_lambda}
+	\subsection{Вычисление формальных характеров $I(\lambda)$}
+		\input{algorithm/algorithm}

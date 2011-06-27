@@ -1,0 +1,49 @@
+Пусть $ \lambda = (\lambda_1, \lambda_2 \,|\, \lambda_3) $. Обозначим через $ \lambda_{ij} $ степень элемента $c_{ij}$ в мономе.
+Тогда $ \lambda_{k1} + \lambda_{k2} + \lambda_{k3} = \lambda_k, \quad k = 1, 2, 3 $, при этом 
+нечётные элементы не могут иметь степень больше 1, т.е. $ 0 \leqslant \lambda_{13}, \lambda_{23}, \lambda_{31}, \lambda_{32} \leqslant 1 $.
+Для того чтобы записать формальный характер $ A(r)\xi_{\lambda} = \chi (\lambda_1, \lambda_2 \,|\, \lambda_3) $, нужно знать веса базисных мономов справа.
+Запишем матрицу элементов $ \lambda_{ij} $. Суммы элементов по строкам образуют вес слева, суммы по столбцам -- вес справа.
+$$
+\begin{matrix}
+\lambda_{11} & \lambda_{12} & \lambda_{13} & \oplus & \lambda_1 \\
+\lambda_{21} & \lambda_{22} & \lambda_{23} & \oplus & \lambda_2 \\
+\lambda_{31} & \lambda_{32} & \lambda_{33} & \oplus & \lambda_3 \\
+\oplus       & \oplus       & \oplus       &        &           \\
+\mu_1        & \mu_2        & \mu_3        &        &           \\
+\end{matrix}
+$$
+
+1) Предположим, что $ \lambda_3 = 0 $. Тогда $ \lambda_{31} = \lambda_{32} = \lambda_{33} = 0 $. 
+\\
+$ \mu = (i + j, (\lambda_1 + \lambda_2 - \lambda_{13} - \lambda_{23}) - (i + j), \lambda_{13} + \lambda_{23}), 
+\quad i = 0, \ldots, \lambda_1 - \lambda_{13}, \quad j = 0, \ldots, \lambda_2 - \lambda_{23} $.
+\\
+Заметим, что $ \sum \limits_{i = 0}^{\lambda_1} \sum \limits_{j = 0}^{\lambda_2} x_1^{i + j} x_2^{\lambda_1 + \lambda_2 - i - j} = 
+\sum \limits_{i = 0}^{\lambda_1} x_1^i x_2^{\lambda_1 - i} \sum \limits_{j = 0}^{\lambda_2} x_1^j x_2^{\lambda_2 - j} = 
+p_{\lambda_1} (x_1, x_2) p_{\lambda_2} (x_1, x_2) $.
+\\
+Получаем, $ \chi (\lambda_1, \lambda_2 \,|\, 0) = 
+p_{\lambda_1} (x_1, x_2) p_{\lambda_2} (x_1, x_2) + 
+p_{\lambda_1 - 1} (x_1, x_2) p_{\lambda_2} (x_1, x_2) x_3 + \\
+p_{\lambda_1} (x_1, x_2) p_{\lambda_2 - 1} (x_1, x_2) x_3 + 
+p_{\lambda_1 - 1} (x_1, x_2) p_{\lambda_2 - 2} (x_1, x_2) x_3^2 = \\
+(p_{\lambda_1} (x_1, x_2) + x_3 p_{\lambda_1 - 1} (x_1, x_2)) (p_{\lambda_2} (x_1, x_2) + x_3 p_{\lambda_2 - 1} (x_1, x_2)) $.
+
+2) $ \lambda_3 = 1 $. Ровно одно из чисел $ \lambda_{31}, \lambda_{32}, \lambda_{33} $ равно 1, остальные 2 числа равны 0.
+Вынесем эту единицу из каждого монома и получим $ \chi (\lambda_1, \lambda_2 \,|\, 1) = (x_1 + x_2 + x_3) \chi (\lambda_1, \lambda_2 \,|\, 0) $.
+
+3) $ \lambda_3 = 2 $. Либо два из чисел $ \lambda_{31}, \lambda_{32}, \lambda_{33} $ равны 1, оставшееся число равно 0, 
+либо $ \lambda_{33} = 2, \lambda_{31} = \lambda_{32} = 0 $. Следовательно, 
+$ \chi (\lambda_1, \lambda_2 \,|\, 2) = (x_1 x_2 + x_1 x_3 + x_2 x_3 + x_3^2) \chi (\lambda_1, \lambda_2 \,|\, 0) $.
+
+4) $ \lambda_3 > 2 $. Тогда можно из каждого монома вынести $ x_3 $, поэтому
+$ \chi (\lambda_1, \lambda_2 \,|\, \lambda_3) = x_3 \chi (\lambda_1, \lambda_2 \,|\, \lambda_3 - 1) $.
+
+Обозначим $ p_t = p_t (x_1, x_2) $.
+$$
+A(r)\xi_{\lambda} = \left\{ \begin{array}{rl}
+(p_{\lambda_1} + x_3 p_{\lambda_1 - 1}) (p_{\lambda_2} + x_3 p_{\lambda_2 - 1}), & \lambda_3 = 0 \\
+(\,x_1 + x_2 + x_3 \,)(p_{\lambda_1} + x_3 p_{\lambda_1 - 1}) (p_{\lambda_2} + x_3 p_{\lambda_2 - 1}), & \lambda_3 = 1 \\
+x_3^{\lambda_3 - 2}[\,x_1 x_2 + x_1 x_3 + x_2 x_3 + x_3^2 \,](p_{\lambda_1} + x_3 p_{\lambda_1 - 1}) (p_{\lambda_2} + x_3 p_{\lambda_2 - 1}), & \lambda_3 \geqslant 2 \\
+\end{array} \right.
+$$

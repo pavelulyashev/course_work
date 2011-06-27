@@ -1,12 +1,15 @@
-Взято из \cite{borel_subalgebras}.
 
 \begin{definition}
 Кортеж длины $r \quad I = (i_1, \ldots, i_r) $, где $ i_k \in \{1, 2, \ldots, m+n\} $, называется мультииндексом длины $r$. 
+Множество всех мультииндексов обозначим $ I(m \,|\, n, r) $.
 Весом мультииндекса $I$ называется кортеж неотрицательных целых чисел $ \lambda (I) = (\lambda_1, \ldots, \lambda_{m + n}) $, 
-где $ \lambda_j = | \{k \;|\; i_k = j\} |$. Очевидно, что $\sum \lambda_i = r $.
+где $ \lambda_j = | \{k \;|\; i_k = j\} |$. Очевидно, что $\sum \lambda_i = r $. 
 \end{definition}
 Множество всех весов обозначим $ \Lambda(r) = \Lambda(m\,|\,n, r) $. 
 Ясно, что $ \lambda(I) = \lambda(J) \iff I = ~J\pi $ для подходящей перестановки $ \pi \in S_{m+n} $. \\
+Для любых мультииндексов $ I, J  \in I(m \,|\, n, r) $ определим линейный функционал $\xi_{IJ}$ в $ S(r) = A(r)^* $, дуальный моному $ c_{IJ} $.
+Поскольку $ \xi_{II} = \xi_{I_{\pi} I_{\pi}} $, где $ \pi \in S_{m + n} $, этот элемент однозначно определяется 
+весом $ \lambda = \lambda(I) $ и обозначается $ \xi_{\lambda} $.
 На множестве весов $\Lambda(r)$ определим \textit{доминантный} порядок по правилу $ \mu \leq \lambda $, 
 если $ \sum\limits_{1 \leqslant k \leqslant l} \mu_k \leq \sum\limits_{1 \leqslant k \leqslant l} \lambda_k, \quad 1 \leqslant l \leqslant m + n $.
 \begin{theorem}
